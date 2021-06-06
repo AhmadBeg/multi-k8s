@@ -20,8 +20,12 @@ before_install:
 script:
   - docker run -e CI=true ahmadusamabeg/ahmad-test npm test
 
+language: generic
 deploy:
   provider: script
   script: bash ./deploy.sh
   on:
     branch: master
+
+
+
